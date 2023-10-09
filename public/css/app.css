@@ -8,13 +8,13 @@
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
-  --bs-indigo: #6610f2;
+  --bs-indigo: #7842C5;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
   --bs-red: #dc3545;
   --bs-orange: #fd7e14;
   --bs-yellow: #ffc107;
-  --bs-green: #198754;
+  --bs-green: #3B8C23;
   --bs-teal: #20c997;
   --bs-cyan: #0dcaf0;
   --bs-black: #000;
@@ -205,6 +205,7 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color:#222222;
 }
 
 hr {
@@ -8739,7 +8740,7 @@ textarea.form-control-lg {
 
 .bg-success {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+  background-color: var(--bs-green)!important;
 }
 
 .bg-info {
@@ -8839,6 +8840,10 @@ textarea.form-control-lg {
 
 .bg-danger-subtle {
   background-color: var(--bs-danger-bg-subtle) !important;
+}
+
+.bg-purple {
+  background-color: var(--bs-indigo) !important;
 }
 
 .bg-light-subtle {

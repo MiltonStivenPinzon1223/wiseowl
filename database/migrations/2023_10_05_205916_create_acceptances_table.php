@@ -15,6 +15,9 @@ class CreateAcceptancesTable extends Migration
     {
         Schema::create('acceptances', function (Blueprint $table) {
             $table->id();
+            $table->boolean('status');
+            $table->foreignId('id_solicitudes')->constrained('solicitudes');
+            $table->foreignId('id_users')->constrained('users');
             $table->timestamps();
         });
     }

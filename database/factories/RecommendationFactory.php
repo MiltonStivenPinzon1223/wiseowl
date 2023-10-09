@@ -3,8 +3,9 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\DB;
 
-class TeamFactory extends Factory
+class RecommendationFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -15,8 +16,8 @@ class TeamFactory extends Factory
     {
         $faker = \Faker\Factory::create();
         return [
-            'name' => $faker->name(),
-            'status' => '0',
+            'recommendation' => $faker->text(),
+            'id_users' => $faker->randomElement(DB::table('users')->pluck('id')),
         ];
     }
 }

@@ -17,7 +17,8 @@ class ProjectFactory extends Factory
         $faker = \Faker\Factory::create();
         return [
             'name' => $faker->name(),
-            'description' => $faker->paragraph(),
+            'description' => $faker->text(),
+            'status' => '1',
             'id_languages' => $faker->randomElement(DB::table('languages')->pluck('id')),
             'id_teams' => $faker->randomElement(DB::table('teams')->pluck('id')),
         ];

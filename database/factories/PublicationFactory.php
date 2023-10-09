@@ -17,7 +17,7 @@ class PublicationFactory extends Factory
         $faker = \Faker\Factory::create();
         return [
             'name' => $faker->name(),
-            'description' => $faker->paragraph(),
+            'description' => $faker->text(),
             'id_projects' => $faker->randomElement(DB::table('projects')->pluck('id')),
             'id_users' => $faker->randomElement(DB::table('users')->pluck('id')),
         ];

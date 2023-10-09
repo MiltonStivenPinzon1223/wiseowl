@@ -17,6 +17,7 @@ class CreateProjectsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
+            $table->boolean('status');
             $table->foreignId('id_languages')->constrained('languages');
             $table->foreignId('id_teams')->constrained('teams');
             $table->timestamps();

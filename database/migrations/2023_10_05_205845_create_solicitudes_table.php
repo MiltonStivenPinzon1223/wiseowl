@@ -15,6 +15,8 @@ class CreateSolicitudesTable extends Migration
     {
         Schema::create('solicitudes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_users')->constrained('users');
+            $table->foreignId('id_groups')->constrained('groups');
             $table->timestamps();
         });
     }
